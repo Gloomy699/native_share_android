@@ -1,15 +1,55 @@
-# native_share_android
+# 📲 native_share_android
 
-Share feature what opens target share app in new task on Android
+A Flutter plugin for **native sharing on Android**, including file sharing, text sharing, and email sending with attachments.
 
-## Getting Started
+## ✨ Features
+✔ Share **files** using Android's native share sheet.  
+✔ Share **text content** with other applications.  
+✔ Send **emails with attachments** directly from your app.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Installation
 
+Add this dependency to your `pubspec.yaml`:
+```yaml
+dependencies:
+  native_share_android: ^0.0.1
+
+Then run:
+
+flutter pub get
+
+
+
+🚀 Usage
+
+import 'package:native_share_android/native_share_android.dart';
+
+
+1️⃣ Share a File
+
+NativeShareAndroid.shareFile(
+  filePath: "/path/to/file.pdf",
+  text: "Check this out!",
+);
+
+
+2️⃣ Share Text
+
+NativeShareAndroid.shareText("Hello, world!");
+
+3️⃣ Send Email with Attachments
+
+NativeShareAndroid.sendEmail(
+  email: "example@gmail.com",
+  subject: "Test Email",
+  body: "This is a test email.",
+  attachments: ["/path/to/file.pdf"],
+);
+
+🔗 License
+
+This project is licensed under the MIT License. See LICENSE for more details.
+
+⚡ Enjoy seamless sharing in your Flutter apps! 🚀
