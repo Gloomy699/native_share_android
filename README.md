@@ -39,13 +39,13 @@ NativeShareAndroid.shareFile(
 
 NativeShareAndroid.shareText("Hello, world!");
 
-3️⃣ Send Email with Attachments
+3️⃣ Send Email with Attachment
 
 NativeShareAndroid.sendEmail(
   email: "example@gmail.com",
   subject: "Test Email",
   body: "This is a test email.",
-  attachments: ["/path/to/file.pdf"],
+  attachment: "/path/to/file.pdf",
 );
 
 🔗 License
