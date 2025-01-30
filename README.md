@@ -14,7 +14,7 @@ A Flutter plugin for **native sharing on Android**, including file sharing, text
 Add this dependency to your `pubspec.yaml`:
 ```yaml
 dependencies:
-  native_share_android: ^0.0.3
+  native_share_android: ^latet_version
 
 Then run:
 

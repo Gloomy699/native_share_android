@@ -101,7 +101,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
       startActivityWithoutChooser(intent)
       result.success(null)
     } catch (e: ActivityNotFoundException) {
-      result.error("NO_EMAIL_CLIENT", "NO EMAIL CLIENT", null)
+      result.error("NO_EMAIL_CLIENT", "No email client installed", null)
     }
   }
 
@@ -122,7 +122,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
       startActivity(intent)
       result.success(null)
     } catch (e: Exception) {
-      result.error("SHARE_ERROR", "SHARE ERROR: ${e.message}", null)
+      result.error("SHARE_ERROR", "Error sharing file: ${e.message}", null)
     }
   }
 
@@ -136,7 +136,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
       startActivity(intent)
       result.success(null)
     } catch (e: Exception) {
-      result.error("SHARE_ERROR", "SHARE ERROR: ${e.message}", null)
+      result.error("SHARE_ERROR", "Error sharing text: ${e.message}", null)
     }
   }
 

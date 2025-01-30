@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 class NativeShareAndroid {
   static const MethodChannel _channel = MethodChannel('native_share_android');
 
-  /// Открывает почтовый клиент с возможностью прикрепления файлов
+  /// Opens the email client with the option to attach files
   static Future<void> sendEmail({
     String? email,
     String? subject,
@@ -19,11 +19,11 @@ class NativeShareAndroid {
         'attachment': attachment ?? "",
       });
     } on PlatformException catch (e) {
-      print("Ошибка при отправке email: '${e.message}'");
+      print("Error sending email: '${e.message}'");
     }
   }
 
-  /// Делится файлом и (опционально) текстом
+  /// Shares a file (optionally with text)
   static Future<void> shareFile({required String filePath, String? text}) async {
     try {
       await _channel.invokeMethod('shareFile', {
@@ -31,16 +31,16 @@ class NativeShareAndroid {
         'text': text ?? "",
       });
     } on PlatformException catch (e) {
-      print("Ошибка при отправке файла: '${e.message}'");
+      print("Error sharing file: '${e.message}'");
     }
   }
 
-  /// Делится только текстом
+  /// Shares only text
   static Future<void> shareText(String text) async {
     try {
       await _channel.invokeMethod('shareText', {'text': text});
     } on PlatformException catch (e) {
-      print("Ошибка при отправке текста: '${e.message}'");
+      print("Error sharing text: '${e.message}'");
     }
   }
 }
