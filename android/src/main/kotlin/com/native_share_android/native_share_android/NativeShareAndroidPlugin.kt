@@ -18,7 +18,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
 
   private lateinit var channel: MethodChannel
   private lateinit var context: android.content.Context
-  private var activity: Activity? = null  // Добавляем переменную для хранения Activity
+  private var activity: Activity? = null
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     context = flutterPluginBinding.applicationContext
@@ -101,7 +101,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
       startActivityWithoutChooser(intent)
       result.success(null)
     } catch (e: ActivityNotFoundException) {
-      result.error("NO_EMAIL_CLIENT", "Нет установленного почтового клиента", null)
+      result.error("NO_EMAIL_CLIENT", "NO EMAIL CLIENT", null)
     }
   }
 
@@ -122,7 +122,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
       startActivity(intent)
       result.success(null)
     } catch (e: Exception) {
-      result.error("SHARE_ERROR", "Ошибка при отправке файла: ${e.message}", null)
+      result.error("SHARE_ERROR", "SHARE ERROR: ${e.message}", null)
     }
   }
 
@@ -136,7 +136,7 @@ class NativeShareAndroidPlugin : FlutterPlugin, MethodCallHandler, ActivityAware
       startActivity(intent)
       result.success(null)
     } catch (e: Exception) {
-      result.error("SHARE_ERROR", "Ошибка при отправке текста: ${e.message}", null)
+      result.error("SHARE_ERROR", "SHARE ERROR: ${e.message}", null)
     }
   }
 
