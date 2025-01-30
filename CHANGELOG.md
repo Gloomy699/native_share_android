@@ -6,3 +6,5 @@
 - Added support for sharing files.
 - Added support for sharing text.
 - Added support for sending emails with attachments.
+
+## 0.0.2 - update README.md
