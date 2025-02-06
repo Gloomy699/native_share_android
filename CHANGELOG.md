@@ -12,3 +12,5 @@
 ## 0.0.3 - update xml files
 
 ## 0.0.3 - update comments
+
+## 0.0.3 - update README.md, added support options.

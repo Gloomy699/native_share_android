@@ -2,6 +2,13 @@
 
 A Flutter plugin for **native sharing on Android**, including file sharing, text sharing, and email sending with attachments.
 
+## Support my work 🙂
+## 🇺🇦Donate to Ukraine's struggle for freedom and independence🇺🇦
+If you like my project, you can support me:
+
+[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue)](https://www.paypal.com/donate/?hosted_button_id=75ZVP3YU4LRQG)
+[![Donate via Monobank](https://img.shields.io/badge/Donate-Monobank-black)](https://send.monobank.ua/jar/9zFEbUM1pN)
+
 ## ✨ Features
 ✔ Share **files** using Android's native share sheet.  
 ✔ Share **text content** with other applications.  
@@ -14,7 +21,7 @@ A Flutter plugin for **native sharing on Android**, including file sharing, text
 Add this dependency to your `pubspec.yaml`:
 ```yaml
 dependencies:
-  native_share_android: ^latet_version
+  native_share_android: ^latest_version
 
 Then run:
 
