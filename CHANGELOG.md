@@ -11,6 +11,9 @@
 
 ## 0.0.3 - update xml files
 
-## 0.0.3 - update comments
+## 0.0.4 - update comments
 
-## 0.0.3 - update README.md, added support options.
+## 0.0.5 - update README.md, added support options.
+
+## 0.0.6 - fixed bug with empty email field in sendEmail method.
+```

@@ -12,12 +12,15 @@ class NativeShareAndroid {
     String? attachment,
   }) async {
     try {
-      await _channel.invokeMethod('sendEmail', {
-        'email': email ?? "",
-        'subject': subject ?? "",
-        'body': body ?? "",
-        'attachment': attachment ?? "",
-      });
+      final args = <String, dynamic>{
+        'email': email ?? '',
+        'subject': subject ?? '',
+        'body': body ?? '',
+      };
+      if (attachment != null && attachment.isNotEmpty) {
+        args['attachment'] = attachment;
+      }
+      await _channel.invokeMethod('sendEmail', args);
     } on PlatformException catch (e) {
       print("Error sending email: '${e.message}'");
     }

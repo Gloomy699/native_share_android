@@ -1,6 +1,6 @@
 name: native_share_android
 description: "A Flutter plugin for sharing files and sending emails natively on Android"
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/Gloomy699/native_share_android
 repository: https://github.com/Gloomy699/native_share_android
 issue_tracker: https://github.com/Gloomy699/native_share_android/issues
